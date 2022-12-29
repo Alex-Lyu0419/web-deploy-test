@@ -1,19 +1,21 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import dotenv from 'dotenv-defaults';
 
-const { Schema } = mongoose;
-mongoose.set('useCreateIndex', true);
+export default {
+    connect: () => {
+        dotenv.config();
+        mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }).then((res) => console.log("mongo db connection created"));
 
-const peopleSchema = new Schema({
-  ssn: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  severity: { type: Number, required: true },
-  location: {
-    name: { type: String, required: true },
-    description: { type: String, required: false },
-  },
-});
-
-const People = mongoose.model("People", peopleSchema);
-const db = { People };
-
-export default db;
+        const db = mongoose.connection;
+        db.on('error', (error) => {
+            console.log(error)
+        });
+        
+        db.once('connected', () => {
+            console.log('Database Connected');
+        });
+    }
+};
