@@ -9,9 +9,9 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
-import { useStyles } from '../hooks/index';
-import axios from '../api';
-import { useScoreCard } from '../hooks/useScoreCard';
+import { useStyles } from '../hooks/index.js';
+import axios from '../api.js';
+import { useScoreCard } from '../hooks/useScoreCard.js';
 
 const Wrapper = styled.section`
   display: flex;

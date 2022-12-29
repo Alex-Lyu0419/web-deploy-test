@@ -1,5 +1,5 @@
 import { Router } from "express";
-import User from "../models/ScoreCard";
+import User from "../models/scoreCard.js";
 
 const router = Router();
 

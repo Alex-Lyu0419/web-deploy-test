@@ -9,11 +9,11 @@ import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
-import db from "./backend/db";
+import db from "./backend/db.js";
 // import Query from "./backend/resolvers/Query";
 // import Mutation from "./backend/resolvers/Mutation";
 // import Subscription from "./backend/resolvers/Subscript/ion";
-import routes from './backend/routes';
+import routes from './backend/routes/index.js';
 // import mongo from "./backend/mongo";
 // import apiRoute from "./backend/route/api";
 
