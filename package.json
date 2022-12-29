@@ -3,6 +3,11 @@
     "version": "0.1.0",
     "main": "index.js",
     "private": true,
+    "engines": {
+        "node": "16.18.0",
+        "npm": "8.x",
+        "yarn": "1.22.x"
+    },
     "dependencies": {
         "@material-ui/core": "^4.12.4",
         "@testing-library/jest-dom": "^5.16.5",
