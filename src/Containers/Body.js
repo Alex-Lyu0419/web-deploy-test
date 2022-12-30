@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import Button from '@material-ui/core/Button';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Paper from '@material-ui/core/Paper';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
+import Button from '@material-ui/core/Button/index.js';
+import FormControl from '@material-ui/core/FormControl/index.js';
+import FormControlLabel from '@material-ui/core/FormControlLabel/index.js';
+import Paper from '@material-ui/core/Paper/index.js';
+import Radio from '@material-ui/core/Radio/index.js';
+import RadioGroup from '@material-ui/core/RadioGroup/index.js';
 import styled from 'styled-components';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField/index.js';
+import Typography from '@material-ui/core/Typography/index.js';
 
 import { useStyles } from '../hooks/index.js';
 import axios from '../api.js';

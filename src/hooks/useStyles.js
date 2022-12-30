@@ -1,6 +1,6 @@
 // resource: https://material-ui.com/styles/basics/
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles/index.js';
 
 export const useStyles = makeStyles({
     input: {
