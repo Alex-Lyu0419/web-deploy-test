@@ -4,6 +4,11 @@
     "version": "0.1.0",
     "main": "index.js",
     "private": true,
+    "engines": {
+        "node": "16.18.0",
+        "npm": "8.x",
+        "yarn": "1.22.x"
+    },
     "dependencies": {
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
