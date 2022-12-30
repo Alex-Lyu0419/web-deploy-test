@@ -4,18 +4,15 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import http from "http";
-import "dotenv-defaults/config.js";
+
 import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 import db from "./backend/db.js";
-// import Query from "./backend/resolvers/Query";
-// import Mutation from "./backend/resolvers/Mutation";
-// import Subscription from "./backend/resolvers/Subscript/ion";
 import routes from './backend/routes/index.js';
-// import mongo from "./backend/mongo";
-// import apiRoute from "./backend/route/api";
+// require('dotenv-defaults').config();
+import "dotenv-defaults/config.js";
 
 // const __dirname = dirname(fileURLToPath(import.meta.url));
 const port = process.env.PORT || 4000;
@@ -28,11 +25,11 @@ app.use(cors());
 app.use(express.json());
 app.use('/', routes);
 // app.use("/api", apiRoute);
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // app.use(express.static(path.join(__dirname, "build")));
-// app.get("/*", function (req, res) {
-//     res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
+app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 // const server = new ApolloServer({
 //     typeDefs,
